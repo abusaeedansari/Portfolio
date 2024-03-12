@@ -1,0 +1,2204 @@
+/* reset.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    color: inherit; /* This makes the anchor text color the same as the surrounding text */
+    text-decoration: none; /* This removes the underline from links */
+}
+/* Extend reset.css with anchor tag reset */
+a:visited, a:hover, a:active {
+    text-decoration: none; /* Removes underlines from links in all states */
+}
+
+/* Base styles for mobile */
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBE7E0;
+    margin: 0 auto;
+    /* Other base styles */
+}
+
+header, main {
+  width: 93%;
+  margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Example component style for mobile */
+
+/* NavBar */
+
+/* Navbar styles */
+
+.navbar {
+  position: fixed; /* Fix position to the top of the page */
+  top: 0; /* Align the top edge of the navbar with the top of the viewport */
+  left: 0; /* Align the left edge of the navbar with the left of the viewport */
+  right: 0; /* Stretch the navbar to the full width of the viewport */
+  width: 93%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  padding-top: 24px;
+ 
+  background: #FBE7E0;
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+  
+  .nav-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .logo {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+.accent {
+    color: #EA552B;
+  }
+  
+  .nav-icon {
+    /* Grouping the lines to form a hamburger icon */
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Adjust gap to match Figma's design */
+    cursor: pointer;
+  }
+  
+  .hamburger-line {
+    width: 24px;
+    border: 1.8px solid #000000;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 60px;
+  }
+  
+  .nav-link {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 420;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    text-decoration: none; /* Removing the underline */
+    letter-spacing: 0.01em;
+  }
+  
+  /* Hover and visited styles for the links */
+  .nav-link:hover, .nav-link:visited {
+    color: #000000; /* Adjust the color as desired */
+  }
+  
+
+.nav-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+  
+  /* ... */
+  
+  .nav-links {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+  }
+
+  /* To Hide the menu */
+
+  /* Add to the existing CSS */
+
+/* Initially hide the menu */
+.nav-links {
+    display: none;
+  }
+  
+  /* Show the menu when it has the 'active' class */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Close icon style */
+  .close-icon {
+    display: none;
+    font-size: 36px;
+    line-height: 24px;
+    position: absolute;
+    top: 24px;
+    right: 22px;
+    font-weight: 100;
+  }
+  
+  /* Show the close icon when the menu is active */
+  .nav-icon.active .close-icon {
+    display: block;
+  }
+  
+  /* Hide the hamburger lines when the menu is active */
+  .nav-icon.active .hamburger-line {
+    display: none;
+  }
+
+  .nav-cta{
+    display: none;
+  }
+
+  .logo{
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  }
+
+  .logo:hover {
+    transform: scale(1.1); /* Slightly scale up the logo */
+    cursor: pointer;
+}
+
+
+#top:target {
+  scroll-margin-top: 150px; /* Adjust this value to match the height of your fixed navbar */
+}
+
+#philosophy:target {
+  scroll-margin-top: 150px; /* Adjust this value to match the height of your fixed navbar */
+}
+
+
+#skills:target {
+  scroll-margin-top: 150px; /* Adjust this value to match the height of your fixed navbar */
+}
+
+#contact:target {
+  scroll-margin-top: 150px; /* Adjust this value to match the height of your fixed navbar */
+}
+
+#bio:target {
+  scroll-margin-top: 150px; /* Adjust this value to match the height of your fixed navbar */
+}
+
+#work:target {
+  scroll-margin-top: 150px; /* Adjust this value to match the height of your fixed navbar */
+}
+
+#education:target {
+  scroll-margin-top: 150px; /* Adjust this value to match the height of your fixed navbar */
+}
+  
+  
+  /* ... */
+  
+  /* Hero Section */
+
+  /* Base styles for the hero section on mobile */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 0px;
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Height is determined by content */
+    margin-top: 120px;
+  }
+  
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 345px; /* Fixed width according to your design */
+    text-align: center;
+  }
+
+  .hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+  }
+
+  .hero-cta-ipad-desk{
+    display: none;
+  }
+  
+  .hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: #000000;
+    margin: 0;
+  }
+  
+  .hero-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;
+    margin: 0;
+  }
+  
+  .hero-cta {
+    display: inline-block;
+    padding: 14px 24px;
+    background: rgba(234, 85, 43, 0.9);
+    border-radius: 107px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+
+  
+  .hero-image {
+    /* Adjustments for the hero image */
+    width: 84%;
+    height: auto; /* Keep the aspect ratio */
+    mix-blend-mode: luminosity;
+    
+  }
+
+  /* Philosophy Section */
+
+  /* Philosophy section styles */
+.philosophy {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  .section-title-ipad-desk{
+    display: none;
+  }
+  
+  .section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 0.05em;
+    text-align: center;
+    align-self: center;
+  }
+  
+  .philosophy-figure {
+    margin: 0;
+    width: 226px;
+    align-self: center;
+  }
+  
+  .philosophy-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    mix-blend-mode: luminosity;
+  }
+  
+  .philosophy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .philosophy-heading {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #000000;
+    letter-spacing: 0.03em;
+  }
+  
+  .philosophy-subheading {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #EA552B;
+    letter-spacing: 0.03em;
+  }
+  
+  .philosophy-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+
+  /* Style for the 'Learn More' button container */
+.philosophy-cta-container {
+    width: 100%; /* Full width to contain the button */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    padding: 0;
+  }
+  
+  .philosophy-cta {
+    padding: 12px 24px;
+    border: 2px solid #EA552B;
+    border-radius: 94px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #EA552B;
+    text-decoration: none;
+    background-color: transparent;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .philosophy-cta:hover{
+    background-color: #EA552B;
+    color: #fff;
+  }
+  
+/* Skills Seciton */
+
+/* Additional example to override figure margins */
+.skills .skill-category figure {
+    margin: 0; /* Override default figure margin if necessary */
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+    width: 100%; /* Full width on mobile */
+
+    margin-top: 60px;
+  }
+  
+  .skills-title, .skills-intro, .skill-name, .skill-description {
+    text-align: center; /* Centers the text */
+  }
+  
+  .skills-title {
+   
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  
+  .skills-intro {
+    margin-top: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    font-size: 36px;
+    color: #000000;
+  }
+  
+  .skill-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .skill-image {
+    /* Image styles */
+    mix-blend-mode: luminosity;
+  }
+
+  .img-discription{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .skill-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  
+  .skill-description {
+    font-family: 'Outfit', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 310;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+  }
+  
+  .skills-footer{
+    padding: 16px 24px;
+  }
+  .skills-cta {
+    padding: 12px 24px;
+    border: 2px solid #EA552B;
+    border-radius: 94px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #EA552B;
+    text-decoration: none;
+    background-color: transparent;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .skills-cta:hover{
+    background-color: #EA552B;
+    color: #fff;
+  }
+  
+  /* Education Section */
+
+  .education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 0;
+    width: 100%; /* Full width on mobile */
+    margin-top: 60px;
+  }
+
+
+  .education-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    width: 100%;
+  }
+  .education-figure-ipad-desk{
+    display: none;
+  }
+  .education-text-container figure{
+    align-self: center;
+  }
+  
+  .education-header {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    width: 100%;
+    justify-self: flex-start;
+    margin-bottom: 20px; /* To ensure full width for alignment */
+  }
+  
+  .education-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .education-article h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #000000;
+    width: 100%;
+    letter-spacing: 0.03em; /* To ensure full width for alignment */
+  }
+  
+  .education-figure {
+    margin: 0;
+    width: 275px; /* Adjust the size as needed */
+  }
+  
+  .education-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    mix-blend-mode: luminosity;
+  }
+  
+
+  
+  .degree-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px; /* Adjust the gap as needed */
+  }
+  
+  .degree-name, .university-name {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .degree-icon {
+    width: 26px; /* Adjust the size as needed */
+    height: auto;
+  }
+
+  .university-icon{
+    width: 22px;
+    height: auto;
+    margin-right: 4px;
+  }
+  
+  .degree-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #EA552B;
+  }
+  
+  .institution-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 20px;
+    color: #000000;
+  }
+  
+  .education-description {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    margin-top: 32px;
+  }
+  
+  /* Certificates Sub Section */
+
+  .certificates-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 0;
+    width: 100%; /* Full width on mobile */
+  }
+
+  .certificates-block-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+  }
+  
+  .certificates-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #000000;
+    letter-spacing: 0.03em;
+  }
+
+  .certificate-link .certificate-name:hover{
+    color: #EA552B;
+    cursor: pointer;
+  }
+
+  .description-icon{
+    display: none;
+  }
+
+  .certificate-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .certificate-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px;
+    gap: 4px;
+    background: #e6d4cab4;
+    border-radius: 47px;
+    width: 72%; /* Fixed width as per the design */
+    
+  }
+  
+  .certificate-icon img {
+    width: 28px; /* Fixed width as per the design */
+    height: auto; /* Fixed height as per the design */
+  }
+  
+  .certificate-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 95%; /* To take the width of the parent */
+  }
+  
+  .certificate-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+  }
+  
+  .provider-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  .certificate-institution {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+  }
+  
+  .certificate-description {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 310;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    text-align: center;
+    margin-top: 24px;
+  }
+  
+  
+/* About Me Section */
+
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%; /* Adjust width for different screen sizes as needed */
+  padding: 0;
+  margin-top: 60px;
+}
+
+.about-me-main-content{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+ 
+}
+
+.about-me-header{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 40px;
+  width: 100%;
+}
+
+.about-me-header .about-me-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: #000000;
+}
+.about-section-title{
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  width: 100%; /* To ensure full width for alignment */
+}
+.about-me-header .about-me-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: #EA552B;
+}
+
+.about-me-tagline{
+  letter-spacing: .05em;
+}
+
+.about-me-figure {
+  margin: 0;
+  align-self: center; /* To center the figure in the flex container */
+}
+
+.about-me-figure .about-me-image {
+  width: 217px; /* Set width based on your design */
+  height: auto; /* Keep aspect ratio */
+  mix-blend-mode: luminosity; /* Check how it looks with your actual image */
+}
+.about-me-content{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-me-content .about-me-description {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+  text-align: left; /* Center the text */
+}
+
+.about-me-actions {
+  display: flex;
+  justify-content: space-between; /* Center and distribute buttons */
+  width: 100%; /* Take the full width */
+}
+
+.about-me-actions .about-me-resume-btn,
+.about-me-actions .about-me-meeting-btn {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.about-me-actions .about-me-resume-btn {
+  background: #EA552B;
+  color: #FFFFFF;
+}
+
+.about-me-resume-btn:hover{
+  background-color: #d64d27;
+  cursor: pointer;
+}
+
+.about-me-actions .about-me-meeting-btn {
+  background: transparent;
+  border: 2px solid #EA552B;
+  color: #EA552B;
+}
+
+.about-me-meeting-btn:hover{
+  background-color: #EA552B;
+  color: #fff;
+  cursor: pointer;
+}
+
+.about-me-figure-ipad-desk{
+  display: none;
+}
+
+  
+/* Materials / Work Section */
+
+.materials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.materials-header{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.materials-header .materials-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+
+.materials-header .materials-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  color: #000000;
+}
+
+.materials-container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.material-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.material-icon img {
+  mix-blend-mode: luminosity;
+  /* Set width and height accordingly if they are specified */
+}
+
+.material-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.material-info .material-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+
+.material-info .material-description {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 14.5px;
+  line-height: 130%;
+  text-align: center;
+  color: #000000;
+  width: 255px;
+}
+
+.material-info .material-learn-more {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 14.5px;
+  line-height: 130%;
+  text-align: center;
+  color: #EA552B;
+  text-decoration: none;
+  width: 255px;
+}
+
+.material-learn-more:hover{
+  text-decoration: underline;
+}
+
+/* Contact Section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.contact-ill-ipad-desk{
+  display: none;
+}
+
+.contact-container{
+  width: 100%;
+}
+
+.contact-right-side{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+.contact-header{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0;
+}
+.contact-section h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.contact-header h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.contact-details{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.contact-details .contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px; /* Adjust the gap based on your design */
+  
+}
+
+.contact-details .contact-icon {
+  /* Use actual icons or SVGs instead of emojis if available */
+  font-size: 24px;
+}
+
+.contact-main{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-details .contact-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contact-illustration{
+  margin-right: 32px;
+}
+
+.contact-illustration img{
+  width: 90%;
+  height: auto;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-actions .contact-resume-btn,
+.contact-actions .contact-meeting-btn {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 24px;
+  border-radius: 49.9058px; /* Adjust as per your design */
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-actions .contact-resume-btn {
+  background: #EA552B;
+  color: #FFFFFF;
+}
+
+.contact-actions .contact-meeting-btn {
+  background: transparent;
+  border: 2px solid #EA552B;
+  color: #EA552B;
+}
+
+/* FAQ Section */
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 60px;
+  
+}
+
+.faq-section h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.faq-section h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.faq-container .faq-item {
+  width: 100%;
+  border-bottom: 1.2px solid #000000;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.faq-container .faq-item summary {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 450;
+  font-size: 17px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 30px; /* space for the arrow */
+}
+
+.faq-container .faq-item summary::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border: solid #000000;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform-origin: 50% 50%;
+  transition: transform 0.4s ease-in-out;
+  pointer-events: none; /* This line ensures the click passes through the arrow */
+}
+
+.faq-container .faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(225deg);
+}
+
+.faq-container .faq-item p {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.4s ease-in-out;
+  margin-top: 16px;
+}
+
+details[open] .faq-item p {
+  max-height: 200px; /* Adjust as needed for content */
+}
+
+/* Remove default arrow for details/summary */
+.faq-container summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Footer Section */
+
+.footer {
+  background: #000000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  color: #fff;
+  margin-top: 60px;
+}
+
+.footer-content {
+  gap: 60px;
+  margin: 0 auto;
+  width: 90%;
+  
+}
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+}
+
+.footer-ill-ipad-desk{
+  display: none;
+}
+
+.footer-title {
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.footer-link:hover{
+  text-decoration: underline;
+}
+
+
+.footer-text {
+  color: #FFFFFF;
+}
+
+.footer-mid{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 60px;
+}
+
+.footer-nav .footer-heading{
+  font-weight: 550;
+}
+
+.footer-nav .footer-list{
+  margin-top: 24px;
+}
+
+.footer-nav .footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav .footer-list li a{
+  font-weight: 300;
+}
+
+.footer-bottom{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.newsletter-title{
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+}
+
+.newsletter-form input{
+  font-family: 'Outfit', sans-serif;
+  background: rgba(197, 179, 169, 0.237);
+  border-radius: 43px;
+  border: none;
+  padding: 9px 24px;
+  color: white;
+  font-size: 14px;
+}
+
+.newsletter-form .newsletter-submit{
+  background-color: #EA552B;
+  font-family: 'Outfit', sans-serif;
+  border-radius: 50px;
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: -36px;
+}
+
+.footer-nav-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav-bottom .footer-link{
+  font-weight: 350;
+}
+
+
+.footer-mid .footer-desk{
+  display: none;
+}
+
+/* iPad Styles */
+/* Use a media query to target devices with a width of 768px (standard iPad portrait width) up to 1024px (standard iPad landscape width) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+main{
+  width: 90%;
+}
+
+/* iPad NavBar */
+
+.navbar {
+  padding-top: 36px;
+}
+
+.nav-header{
+  width: 98%;
+}
+
+.logo{
+  font-size: 26px;
+}
+
+.hamburger-line{
+  width: 28px;
+}
+
+.nav-links{
+  padding-bottom: 36px;
+}
+
+.nav-link{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.close-icon{
+  top: 36px;
+}
+
+/* iPad Hero Section */
+
+.hero {
+  margin-top: 140px;
+}
+
+.hero-content{
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.hero-text{
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.hero-cta{
+  display: none;
+}
+
+.hero-title{
+  font-size: 60px;
+  letter-spacing: 3%;
+  line-height: 130%;
+}
+
+.hero-subtitle{
+  font-size: 18px;
+  width: 90%;
+  line-height: 150%;
+ font-weight: 420;
+ letter-spacing: 0.03em;
+}
+
+.hero-cta-ipad-desk{
+  display: inline;
+  padding: 18px 28px;
+  background: rgba(234, 85, 43, 0.9);
+  border-radius: 107px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.hero-image {
+  /* Adjustments for the hero image */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+/* iPad Philosophy Section */
+
+.philosophy{
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.philosophy-content{
+  flex-basis: 60%;
+}
+
+.section-title{
+  display: none;
+}
+
+.section-title-ipad-desk{
+  display: block;
+  font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 0.05em;
+}
+
+.philosophy-heading{
+  font-size: 38px;
+}
+
+.philosophy-subheading{
+  font-size: 20px;
+}
+
+.philosophy-cta-container{
+  justify-content: flex-start;
+}
+
+.philosophy-figure {
+  flex-basis: 40%;
+  width: 100%;
+}
+
+/* iPad Skills Section */
+
+
+.skills-title{
+  font-size: 22px;
+}
+
+.skills-intro{
+  font-size: 38px;
+}
+
+.skills-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: end;
+}
+
+.skill-category{
+  width: 50%;
+  gap: 24px;
+}
+
+.skill-description{
+  font-size: 14px;
+  width: 70%;
+}
+
+/* iPad Education Section */
+
+.education-article{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  
+}
+
+.education-header {
+  font-size: 22px;
+}
+
+.education-text-container{
+  flex-basis: 80%;
+}
+.education-figure{
+  display: none;
+}
+
+.education-article .education-intro{
+  font-size: 38px;
+}
+
+.education-figure-ipad-desk{
+  display: inline;
+}
+
+.degree-title{
+  font-size: 18px;
+}
+
+.institution-name{
+  font-size: 17px;
+}
+
+/* ipad Certificates Section */
+
+.certificates-block-container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.certificate-header{
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.certificate-name{
+  margin-bottom: 6px;
+}
+
+.certificate-entry {
+ width: 40%;
+ align-items: start;
+}
+
+.certificate-details{
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.provider-details{
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.certificates-title{
+  font-size: 38px;
+}
+
+.certificate-description{
+  text-align: left;
+  margin-top: 14px;
+}
+
+/* Ipad About Me Section */
+
+.about-me-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+}
+
+.about-section-title{
+  font-size: 22px;
+}
+
+.about-me-header .about-me-title{
+  font-size: 38px;
+}
+
+.about-me-figure{
+  display: none;
+}
+
+.about-me-figure-ipad-desk{
+  display: block;
+  mix-blend-mode: luminosity;
+  flex-basis: 20%;
+  width: 40%;
+}
+
+.about-me-main-content{
+  flex-basis: 80%;
+}
+
+.about-me-actions{
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.about-me-actions .about-me-resume-btn,
+.about-me-actions .about-me-meeting-btn{
+  padding: 13px 16px;
+  font-weight: 600;
+}
+
+/* Ipad Materials / Work Section */
+
+.materials-header .materials-title{
+  font-size: 22px;
+}
+
+.materials-header .materials-tagline{
+  font-size: 38px;
+}
+
+.materials-container{
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.material-info .material-name{
+  letter-spacing: 0.025em;
+}
+
+.material-info .material-description {
+  font-size: 16px;
+}
+
+/* Ipad Contact Section */
+
+.contact-section h2{
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+
+.contact-ill-ipad-desk{
+  display: inline;
+  padding-right: 50px;
+  border-right: 1px solid black;
+  padding-left: 50px;
+  margin-left: 30px;
+}
+
+.contact-illustration{
+  display: none;
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-right-side{
+  width: 50%;
+}
+
+.contact-ill-ipad-desk{
+
+  width: 30%;
+}
+
+.contact-header h3{
+  font-size: 38px;
+}
+
+/* Ipad FAQ Section */
+
+.faq-section{
+  width: 75%;
+}
+
+.faq-section h2{
+  font-size: 22px;
+}
+
+.faq-section h3{
+  font-size: 38px;
+}
+
+.faq-container{
+  margin-top: 16px;
+}
+.faq-container .faq-item{
+  margin-bottom: 22px;
+}
+
+/* Ipad Footer Section */
+
+.footer-ill-ipad-desk{
+  display: inline;
+}
+
+}
+
+/* Desktop view styles */
+@media only screen and (min-width: 1048px){
+
+  header, main{
+    width: 1200px;
+  }
+
+  /* Desktop NavBar */
+
+  .navbar{
+    padding-top: 18px;
+    padding-bottom: 10px;
+  }
+
+  .nav-header{
+    justify-self: start;
+    width: 200px;
+  }
+
+  .logo{
+    font-size: 24px;
+  }
+
+  .navbar{
+    width: 1200px;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-icon, .close-icon{
+    display: none;
+  }
+
+  .nav-links{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+
+  }
+
+  .nav-link{
+    transition: all 0.2s ease;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+  
+  .nav-cta{
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust as needed */
+    transition: all 0.2s ease;
+  }
+
+  .email {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    transition: all 0.2s ease;
+}
+
+.icon {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 35px;
+    color: #EA552B;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2.6087px 14px -6.08696px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for navigation items */
+.nav-link:hover, .email:hover {
+  color: #EA552B; /* Change to the color you want on hover */
+  text-decoration: underline; /* Example effect */
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #EA552B; /* Change to the color you want on hover */
+  color: #FFFFFF; /* Change icon color on hover if needed */
+  cursor: pointer;
+}
+
+/* Desktop Hero Section */
+
+
+
+.hero-content{
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.hero-text{
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.hero-cta{
+  display: none;
+}
+
+.hero-title{
+  font-size: 60px;
+  letter-spacing: 3%;
+  line-height: 130%;
+}
+.hero-subtitle{
+  font-size: 18px;
+  width: 80%;
+  line-height: 150%;
+ font-weight: 420;
+ letter-spacing: 0.03em;
+}
+
+
+.hero-cta-ipad-desk{
+  display: inline;
+  padding: 18px 28px;
+  background: rgba(234, 85, 43, 0.9);
+  border-radius: 107px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.hero-cta-ipad-desk:hover{
+  background-color: #d64d27;
+}
+
+.hero-image {
+  /* Adjustments for the hero image */
+  width: 36%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+
+/* Desktop Philosophy Section */
+
+.philosophy{
+  flex-direction: row;
+  justify-content: space-between;
+}
+.philosophy-content{
+  flex-basis: 75%;
+}
+
+.section-title{
+  display: none;
+}
+
+
+.section-title-ipad-desk{
+  display: block;
+  font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 0.05em;
+}
+
+.philosophy-figure {
+  flex-basis: 25%;
+  width: 0%;
+}
+
+.philosophy-cta-container{
+  justify-content: flex-start;
+}
+
+/* Desktop Skills Section */
+
+.skills{
+  margin-top: 100px;
+}
+
+.skills-title{
+  font-size: 22px;
+}
+
+.skills-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: end;
+}
+
+.skill-category{
+  width: 25%;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* Desktop Education Section */
+.education-section{
+  margin-top: 100px;
+}
+.education-article{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.education-header {
+  font-size: 22px;
+}
+
+.education-text-container{
+  flex-basis: 60%;
+}
+
+.education-figure{
+  display: none;
+}
+
+
+.education-figure-ipad-desk{
+  display: inline;
+  flex-basis: 28%;
+  margin-right: 60px;
+  align-self: flex-end;
+}
+
+.degree-title{
+  font-size: 18px;
+}
+
+.institution-name{
+  font-size: 17px;
+}
+
+/* Desktop Certificates Section */
+
+.certificates-block-container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: flex-start;
+  justify-content: space-between;
+
+}
+
+.certificate-header{
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.certificate-name{
+  margin-bottom: 6px;
+}
+
+.certificate-entry {
+  width: 45%;
+  align-items: start;
+ }
+
+ .certificate-details{
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.provider-details{
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.certificates-title{
+  font-size: 38px;
+}
+
+.certificate-description{
+  text-align: left;
+  margin-top: 14px;
+}
+
+.certificate-description-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 14px;
+}
+
+.certificate-description{
+  margin-top: 0px;
+}
+
+.description-icon{
+  display: inline;
+  margin-top: 3px;
+}
+
+/* Desktop Bio or About Section */
+
+.about-me-section{
+  flex-direction: row;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.about-section-title{
+  font-size: 22px;
+}
+
+
+.about-me-figure{
+  display: none;
+}
+
+.about-me-main-content{
+  flex-basis: 50%;
+}
+
+.about-me-figure-ipad-desk{
+  display: inline;
+  flex-basis: 30%;
+  mix-blend-mode: luminosity;
+  width: 50%;
+  
+}
+
+.about-me-actions{
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+/* Desktop Materials */
+.materials-section{
+  margin-top: 100px;
+}
+.materials-header .materials-title{
+  font-size: 22px;
+}
+
+.materials-container{
+  margin-top: 24px;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.material-info .material-name{
+  letter-spacing: 0.025em;
+}
+
+.material-info .material-name{
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 18px;
+}
+
+.material-info .material-description {
+  font-size: 16px;
+}
+
+
+/* Desktop Contact Section */
+
+.contact-section{
+  margin-top: 100px;
+}
+
+.contact-section h2{
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+
+.contact-ill-ipad-desk{
+  display: inline;
+  padding-right: 50px;
+  border-right: 1px solid black;
+  width: 30%;
+}
+
+
+.contact-illustration{
+  display: none;
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-header{
+  width: auto;
+}
+
+.contact-item{
+  align-items: center;
+  font-size: 18px;
+}
+
+/* Desktop FAQ Section */
+
+.faq-section{
+  width: 75%;
+  margin-top: 100px;
+}
+
+.faq-section h2{
+  font-size: 22px;
+}
+
+.faq-container{
+  width: 90%;
+  margin-top: 20px;
+}
+
+.faq-container .faq-item{
+  margin-bottom: 22px;
+}
+
+/* Desktop Footer Section */
+
+.footer-ill-ipad-desk{
+  display: inline;
+  width: 20px;
+}
+
+.footer-mid{
+  margin-top: 0px;
+}
+
+.footer-mid .footer-desk{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+ 
+}
+
+.footer-top{
+  display: none;
+}
+
+}
